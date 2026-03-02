@@ -1,36 +1,68 @@
-#Data structures used
-    ##hashmap = for storing words and frequency
-    ##arraylist = for storing sorted result while suggesting words and showing as suggetions
 
+##  Data Structures Used
 
-#adding logic
-   ##first check if hashmap already has the word if word present just say already exists
-   ##if word is not present put word in key and frequency in value as 1
+### HashMap
+- Used for storing words and their frequency.
+- Key → Word  
+- Value → Frequency  
 
-#searching logic with frequency increase
-    ##if word is present in hashmap (.containKey()) then increase the frequency 
-    ##if word not present just say not found
+### ArrayList
+- Used for storing sorted results while suggesting words.
+- Displays suggestions to the user.
 
-#suggestion logic
-    ##first system ask you about some prefix and k = which mean at most how many suggeston user want to see
-    ##add words in the arraylist which start with string present in prefix
-    ##sort the arraylist 
-        for sorting we can use two methods using nested loop(selection sort or any sorting allgorithum)
-        using collection.sort 
-        for this system we used collection.sort because it has less time complexity
-    ##if arraylist size > k after sorting print sublist until then k
-    ##if size is not > k then just print list
+---
 
-#run and test
-    ##java 8+ version must be installed on system
-    ##use any ide which support java
-    ##configure and then run
-           # or
-    ##just go at the path of file
-    ##type javac Assignment.java  and hit enter
-    then java Assighment
+##  Adding Logic
 
+- First, check if the HashMap already contains the word.
+- If the word is present:
+  - Display message: "Word already exists".
+- If the word is not present:
+  - Insert the word as the key.
+  - Set frequency as value = 1.
 
-    
+---
 
-    
+##  Searching Logic (With Frequency Increase)
+
+- If the word is present in the HashMap using `.containsKey()`:
+  - Increase its frequency by 1.
+- If the word is not present:
+  - Display message: "Word not found".
+
+---
+
+## Suggestion Logic
+
+- First, the system asks the user for:
+  - A prefix string
+  - A value `k` (maximum number of suggestions required)
+
+- Add words into the ArrayList that start with the given prefix.
+- Sort the ArrayList:
+  - Sorting can be done using:
+    - Nested loops (Selection Sort or other sorting algorithms), or
+    - `Collections.sort()`
+  - In this system, `Collections.sort()` is used because it has better time complexity.
+
+- If `arrayList.size() > k`:
+  - Print the sublist from index `0` to `k`.
+- If size is not greater than `k`:
+  - Print the entire list.
+
+---
+
+##  Run and Test
+
+### Requirements
+- Java 8+ must be installed on the system.
+
+### Run Using IDE
+- Open the project in any Java-supported IDE.
+- Configure JDK.
+- Run `Assignment.java`.
+
+### Run Using Terminal
+
+1. Go to the project folder path.
+2. Compile the file:
